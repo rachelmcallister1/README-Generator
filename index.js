@@ -5,16 +5,27 @@ const inquirer = require("inquirer")
 const generateMarkdown = require("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
 const questions = [
-    {
-        type: "input",
-        name: "title",
-        message: "What is the title of your application?"
-    },
+    //re read the readme, you may not need the first title
+    // {
+    //     type: "input",
+    //     name: "title",
+    //     message: "What is the title of your application?"
+    // },
     {
         type: "list",
         name: "license",
         message: "How would you like to license this?",
         choices: [ 'MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None' ]
+    },
+    {
+        type: "input",
+        name: "github",
+        message: "What is your username for Github?",
+    },
+    {
+        type: "input",
+        name: "email",
+        input: "What is your email address?",
     }
 ];
 
