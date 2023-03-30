@@ -11,6 +11,17 @@ const questions = [
     //     name: "title",
     //     message: "What is the title of your application?"
     // },
+
+    {
+        type: "input",
+        name: "title",
+        message: "What is the title of your app?",
+    },
+    {
+        type: "input",
+        name: "description",
+        input: "What is the description?",
+    },
     {
         type: "list",
         name: "license",
@@ -19,14 +30,34 @@ const questions = [
     },
     {
         type: "input",
+        name: "installation",
+        message: "What is the command to install dependencies?",
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "What is the application used for?",
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "How can a user contribute to the app?",//answer: clone repo, make change, submit pull request
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "What is the command to run the tests?",
+    },
+    {
+        type: "input",
         name: "github",
-        message: "What is your username for Github?",
+        message: "What is your GitHub username?",
     },
     {
         type: "input",
         name: "email",
-        input: "What is your email address?",
-    }
+        message: "What is your email?",
+    },
 ];
 
 

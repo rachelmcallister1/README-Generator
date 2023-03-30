@@ -1,10 +1,10 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license !== "None"){
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
-  } 
-  return " "
+  if (license !== 'None') {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return '';
 }
 
 // TODO: Create a function that returns the license link
@@ -29,25 +29,42 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  // we're grabbing the users description data. inserting HTML or other file content (writing string). Using a template literal to template the JavaScript inside of a string. 
   return `# ${data.title}
-  #description
-  ${data.description}
   ${renderLicenseBadge(data.license)}
 
   ## Description
 
+  ${data.description}
+
+
   ## Table of Contents
 
-  ## Installation(#installation)
+  ## [Installation](#installation)
 
-  ## Usage(#usage)
+  ## [Usage](#usage)
 
-  ## Contributing(#contributing)
+  ## [Contributing](#contributing)
 
-  ## Tests(#tests)
+  ## [Tests](#tests)
 
-  ## Questions 
-  For any additional questions, you can connect me at abcsefg@absdefg.com 
+  ## [Questions](#questions)
+  
+
+  ## Installation
+  ${data.installation}
+
+  ## Usage
+  ${data.usage}
+
+  ## Contributing 
+  ${data.contributing}
+  
+  ## Tests
+  ${data.tests}
+
+  ## Questions
+  For any additional questions, you can connect me at ${data.email} or [${data.github}](https://github.com/${data.github})
 `;
 }
 module.exports = generateMarkdown;
